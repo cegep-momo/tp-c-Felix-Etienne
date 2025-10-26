@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 #include "library.h"
 
@@ -151,6 +152,18 @@ void Library::displayAllBooks() {
     if (books.empty()) {
         cout << "Aucun livre dans la bibliothèque.\n";
         return;
+    } 
+    cout << "Tri des livres par titre ou auteur (1 = titre, 0 = auteur)\n";
+    int choice;
+    cin >> choice;
+    if(choice==0){
+        std::sort(books.begin(), books.end(), [](const unique_ptr<Book>& a, const unique_ptr<Book>& b) {
+            return a->getAuthor() < b->getAuthor();
+        });
+    } else{
+        std::sort(books.begin(), books.end(), [](const unique_ptr<Book>& a, const unique_ptr<Book>& b) {
+            return a->getTitle() < b->getTitle();
+        });
     }
     
     cout << "\n=== TOUS LES LIVRES ===\n";
@@ -160,6 +173,7 @@ void Library::displayAllBooks() {
         cout << "-------------------------\n";
     }
 }
+
 
 // Display available books
 void Library::displayAvailableBooks() {

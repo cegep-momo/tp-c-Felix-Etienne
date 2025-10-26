@@ -16,3 +16,5 @@ Il contient 2 fichiers `books.txt`et `users.txt` que vous pouvez utilisez pour t
 Pour ca il suffit de les copiers dans le repertoire `build` avec l'application `bibliotheque`
 
 Ajout de la Confirmation avant suppression de livres.
+
+Tri des résultats par titre, auteur pour l’affichage (utilisation de la fonction de tri de la STL).
