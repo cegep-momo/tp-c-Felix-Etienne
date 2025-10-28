@@ -18,3 +18,13 @@ Pour ca il suffit de les copiers dans le repertoire `build` avec l'application `
 Ajout de la Confirmation avant suppression de livres.
 
 Tri des résultats par titre, auteur pour l’affichage (utilisation de la fonction de tri de la STL).
+
+# Veille technologique
+
+Expliquez en détails une fonctionnalité / notion dans le code que ne nous avons pas ou peu vu en cours :
+
+    - Ecrire et lire un fichier .txt (sérialiser les objets en lignes délimitées et lire ligne par ligne)
+
+Proposez une solution plus adaptée pour la gestion de bibliothèque et faisant appel éventuellement à une technologie autre que le C++, et expliquez comment vous interfaceriez ça avec le C++. Pensez au futur de cette bibliothèque à Alexandrie qui pourrait éventuellement contenir des millions de livres :
+
+    - L'ajout d'une base de données (MySql/MongoDB) pour une gestion plus rapide et efficase. Pour interfacer via driver C++ (libpqxx/mysql-connector) ou via API REST. Permet recherches rapides et une meilleur securité.
